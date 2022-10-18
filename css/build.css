@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: aviano, serif;
+  background: #f5f5f5;
+}
+
+header .navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 15px;
+  border-radius: 5px;
+  box-shadow: 0 6px 16px hsl(0deg, 0%, 77%);
+}
+header .navbar .nav-branding {
+  font-size: 1.5rem;
+  color: var(--black-color);
+  text-decoration: none;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+}
+header .navbar .nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 36px;
+}
+@media screen and (max-width: 768px) {
+  header .navbar .nav-menu {
+    gap: 50px;
+    height: auto;
+    position: fixed;
+    left: -100%;
+    top: 100px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+}
+header .navbar .nav-menu .nav-item {
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  header .navbar .nav-menu .nav-item {
+    margin: 16px 0;
+  }
+}
+header .navbar .nav-menu .nav-link {
+  color: hsl(36deg, 82%, 31%);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+header .navbar .nav-menu .nav-link:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+  header .navbar .nav-menu.active {
+    left: 0;
+    z-index: 1000;
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: hsl(36deg, 82%, 31%);
+}
+
+@media (max-width: 768px) {
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+.hero {
+  margin-top: 10px;
+  border-radius: 5px;
+  min-height: 60vh;
+  position: relative;
+  background-image: url(../images/selale-kiroglu-IFv-b1Kpeqc-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding-top: 24px;
+  color: white;
+  height: 100%;
+  width: 5%;
+}
+.hero a.left {
+  left: 0;
+}
+.hero a.right {
+  right: 0;
+}
+
+#nav_big_text {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  color: rgba(144, 92, 14, 0.185);
+  opacity: 0;
+  font-size: 12rem;
+  font-weight: 700;
+  line-height: 0.8;
+  text-transform: uppercase;
+  transform: translateX(10%);
+  transition-property: transform, opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+
+#nav_big_text.big_text_active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+}
+
+.copyright {
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+  color: hsl(36deg, 82%, 31%);
+  text-transform: uppercase;
+}
+
+.social_links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  gap: 20px;
+}
+.social_links a {
+  display: flex;
+  color: hsl(36deg, 82%, 31%);
+  width: auto;
+  height: 25px;
+  align-items: center;
+}
+
+/*# sourceMappingURL=build.css.map */

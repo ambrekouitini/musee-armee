@@ -16,10 +16,6 @@ p {
   font-size: 16px;
 }
 
-h2 {
-  letter-spacing: 1px;
-}
-
 header .navbar {
   min-height: 70px;
   display: flex;
@@ -237,35 +233,26 @@ main .histoire .histoire-wrapper {
   padding: 25px;
   gap: 5%;
 }
-@media screen and (max-width: 768px) {
-  main .histoire .histoire-wrapper {
-    flex-direction: column;
-  }
-}
-main .histoire .histoire-wrapper .sticky-titles .sticky {
-  position: sticky;
-  top: 100px;
-  font-family: aviano, serif;
-  z-index: 10;
+main .histoire .histoire-wrapper .sticky-titles {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  width: 30%;
   align-items: flex-end;
-  border-radius: 5px;
-  background-color: rgba(144, 92, 14, 0.53);
-  box-shadow: 0 6px 16px hsl(0deg, 0%, 77%);
-  padding: 15px;
+}
+main .histoire .histoire-wrapper .sticky-titles h2 {
+  position: sticky;
+  top: 100px;
+  font-family: aviano, serif;
+  background: blue;
+  z-index: 10;
 }
 main .histoire .content {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 30px;
   padding: 1%;
-}
-main .histoire .content .article-all {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  width: 70%;
 }
 
-/*# sourceMappingURL=build.css.map */
+/*# sourceMappingURL=main.css.map */
